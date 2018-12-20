@@ -1,0 +1,16 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <form  method="post">
+        <button asp-page-handler="Show" asp-route-data="123">点击1</button>
+    </form>
+    <p>@Model.messsage</p>
+    <a asp-page="./Error">错误页</a>
+    <a asp-page="./Movies/Index">数据页</a>
+</div>
